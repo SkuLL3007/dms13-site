@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMS13 — Climatisation, électricité, plomberie, rénovation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F2027;
+    --surface: #16323B;
+    --surface-2: #1D3D47;
+    --copper: #C9773B;
+    --copper-light: #E0A066;
+    --cyan: #5FBFCB;
+    --text: #EAF1F0;
+    --text-muted: #8FA6A8;
+    --border: rgba(234,241,240,0.12);
+    --border-strong: rgba(234,241,240,0.22);
+    --radius: 4px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px; height: 6px;
+    background: var(--cyan);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h2 { font-size: clamp(26px, 3.2vw, 38px); }
+  h3 { font-size: 19px; font-weight: 500; }
+  p { color: var(--text-muted); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 13px 22px;
+    border-radius: var(--radius);
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+  .btn-primary { background: var(--copper); color: #1A0F06; }
+  .btn-primary:hover { background: var(--copper-light); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; border-color: var(--border-strong); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(15,32,39,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    display: flex; align-items: baseline; gap: 6px;
+  }
+  .logo span { color: var(--copper); }
+  nav ul { list-style: none; display: flex; gap: 32px; }
+  nav ul a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
+  nav ul a:hover { color: var(--text); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  @media (max-width: 760px) { .nav-links ul { display: none; } }
+
+  /* Hero */
+  .hero {
+    padding: 88px 0 72px;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: center top;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center;
+  }
+  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero h1 { font-size: clamp(34px, 5vw, 54px); margin: 16px 0 20px; }
+  .hero h1 em { font-style: normal; color: var(--copper); }
+  .hero p.lead { font-size: 17px; max-width: 46ch; margin-bottom: 32px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Gauge signature panel */
+  .gauge-panel {
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    padding: 28px;
+  }
+  .gauge-panel .panel-label {
+    font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    display: flex; justify-content: space-between; margin-bottom: 18px;
+  }
+  .gauge-panel .panel-label .live { color: var(--cyan); }
+  .gauge-svg { width: 100%; height: auto; margin: 0 auto 18px; display: block; }
+  .gauge-needle {
+    transform-origin: 140px 140px;
+    animation: settle 1.4s cubic-bezier(.22,1.4,.36,1) forwards;
+  }
+  @keyframes settle {
+    0% { transform: rotate(-90deg); }
+    100% { transform: rotate(38deg); }
+  }
+  .readout-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .readout {
+    background: var(--surface-2);
+    padding: 12px 14px;
+  }
+  .readout .k { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .readout .v { font-family: var(--font-mono); font-size: 15px; color: var(--text); margin-top: 3px; }
+
+  section { padding: 84px 0; }
+  .section-head { max-width: 60ch; margin-bottom: 48px; }
+  .section-head h2 { margin-top: 14px; }
+  .section-head p { margin-top: 14px; font-size: 15px; }
+
+  /* Services */
+  .services-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+  .service-card {
+    background: var(--bg);
+    padding: 28px 24px;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--surface); }
+  .service-icon {
+    width: 40px; height: 40px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+    color: var(--copper);
+  }
+  .service-card h3 { margin-bottom: 8px; }
+  .service-card p { font-size: 14px; }
+
+  /* Marques / certification */
+  .trust-band {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0;
+  }
+  .trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .brands { display: flex; gap: 28px; flex-wrap: wrap; }
+  .brand-chip {
+    font-family: var(--font-mono); font-size: 13px; color: var(--text-muted);
+    border: 1px solid var(--border-strong); border-radius: var(--radius);
+    padding: 8px 14px;
+  }
+  .cert-badge {
+    display: flex; align-items: center; gap: 12px;
+    font-family: var(--font-mono); font-size: 13px;
+    border: 1px solid var(--copper); border-radius: var(--radius);
+    padding: 10px 16px; color: var(--copper-light);
+  }
+
+  /* Zone */
+  .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  @media (max-width: 760px) { .zone-grid { grid-template-columns: 1fr; } }
+  .zone-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .zone-chip {
+    font-size: 13px; padding: 8px 14px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); color: var(--text-muted);
+  }
+
+  /* Process */
+  .process-list { border-top: 1px solid var(--border); }
+  .process-item {
+    display: grid; grid-template-columns: 64px 1fr 2fr; gap: 24px;
+    padding: 28px 0; border-bottom: 1px solid var(--border);
+    align-items: baseline;
+  }
+  @media (max-width: 700px) { .process-item { grid-template-columns: 40px 1fr; } .process-item p { grid-column: 2; } }
+  .process-num { font-family: var(--font-mono); color: var(--copper); font-size: 14px; }
+
+  /* CTA / contact */
+  .cta-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+  }
+  .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+  @media (max-width: 860px) { .cta-grid { grid-template-columns: 1fr; } }
+  .cta-copy p { font-size: 15px; margin-top: 14px; max-width: 42ch; }
+  .contact-list { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+  .contact-list li { list-style: none; font-family: var(--font-mono); font-size: 14px; color: var(--text-muted); }
+
+  form { display: flex; flex-direction: column; gap: 14px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+  label { font-size: 12px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); display: block; margin-bottom: 6px; }
+  input, select, textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 11px 12px;
+  }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--cyan); outline-offset: 1px; border-color: var(--cyan); }
+  textarea { resize: vertical; min-height: 90px; }
+
+  footer {
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <div class="logo">DMS<span>13</span></div>
+    <div class="nav-links">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#zone">Zone d'intervention</a></li>
+        <li><a href="#process">Comment ça marche</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Devis gratuit</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">QualiPAC · Bouches-du-Rhône & PACA</div>
+      <h1>Climatisation, électricité,<br>plomberie, <em>rénovation</em>.</h1>
+      <p class="lead">DMS13 intervient chez les particuliers et les professionnels du 13, du diagnostic à l'installation — pompes à chaleur, clim, réseau électrique, plomberie et travaux de rénovation.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Demander un devis</a>
+        <a href="#services" class="btn btn-ghost">Voir les services</a>
+      </div>
+    </div>
+
+    <div class="gauge-panel">
+      <div class="panel-label"><span>Disponibilité</span><span class="live">● intervention sous 48h</span></div>
+      <svg class="gauge-svg" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jauge d'intervention DMS13">
+        <path d="M 30 140 A 110 110 0 0 1 250 140" fill="none" stroke="#1D3D47" stroke-width="14" stroke-linecap="round"/>
+        <path d="M 30 140 A 110 110 0 0 1 250 140" fill="none" stroke="#C9773B" stroke-width="14" stroke-linecap="round" stroke-dasharray="245" stroke-dashoffset="70" opacity="0.85"/>
+        <g class="gauge-needle">
+          <line x1="140" y1="140" x2="140" y2="45" stroke="#EAF1F0" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <circle cx="140" cy="140" r="8" fill="#5FBFCB"/>
+      </svg>
+      <div class="readout-grid">
+        <div class="readout"><div class="k">Certification</div><div class="v">QualiPAC</div></div>
+        <div class="readout"><div class="k">Marques</div><div class="v">4 partenaires</div></div>
+        <div class="readout"><div class="k">Zone</div><div class="v">13 + PACA</div></div>
+        <div class="readout"><div class="k">Clientèle</div><div class="v">Part. & pro</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Ce que fait DMS13</div>
+      <h2>Quatre métiers, un seul interlocuteur</h2>
+      <p>Du dépannage à l'installation complète, DMS13 couvre l'ensemble des corps de métier techniques du bâtiment.</p>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
+      </div>
+      <h3>Climatisation & PAC</h3>
+      <p>Installation, entretien et dépannage de climatiseurs et pompes à chaleur — Daikin, Mitsubishi, Atlantic, Toshiba.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      </div>
+      <h3>Électricité</h3>
+      <p>Mise aux normes, installation de tableaux, dépannage électrique résidentiel et tertiaire.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3v6a5 5 0 0 0 10 0V3M12 15v6"/></svg>
+      </div>
+      <h3>Plomberie</h3>
+      <p>Installation, réparation et entretien de vos réseaux d'eau — sanitaires, chauffe-eau, canalisations.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+      </div>
+      <h3>Rénovation</h3>
+      <p>Travaux de rénovation intérieure — salle de bain, cuisine — coordonnés avec vos travaux techniques.</p>
+    </div>
+  </div>
+</section>
+
+<div class="trust-band">
+  <div class="wrap trust-inner">
+    <div class="cert-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="6"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg>
+      Certifié QualiPAC
+    </div>
+    <div class="brands">
+      <span class="brand-chip">Daikin</span>
+      <span class="brand-chip">Mitsubishi</span>
+      <span class="brand-chip">Atlantic</span>
+      <span class="brand-chip">Toshiba</span>
+    </div>
+  </div>
+</div>
+
+<section id="zone">
+  <div class="wrap zone-grid">
+    <div>
+      <div class="eyebrow">Couverture</div>
+      <h2>Basés dans le 13,<br>on se déplace dans toute la région</h2>
+      <p>DMS13 intervient chez les particuliers comme chez les professionnels — syndics, agences, gestionnaires — sur l'ensemble des Bouches-du-Rhône et les départements limitrophes de PACA.</p>
+    </div>
+    <div>
+      <div class="zone-chips">
+        <span class="zone-chip">Marseille</span>
+        <span class="zone-chip">Aix-en-Provence</span>
+        <span class="zone-chip">Aubagne</span>
+        <span class="zone-chip">Vitrolles</span>
+        <span class="zone-chip">Rognac</span>
+        <span class="zone-chip">Salon-de-Provence</span>
+        <span class="zone-chip">Istres</span>
+        <span class="zone-chip">Martigues</span>
+        <span class="zone-chip">+ reste de la PACA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Déroulé</div>
+      <h2>Comment se passe une intervention</h2>
+    </div>
+    <div class="process-list">
+      <div class="process-item">
+        <span class="process-num">01</span>
+        <h3>Prise de contact</h3>
+        <p>Vous décrivez votre besoin par téléphone ou via le formulaire — devis gratuit sous 24h.</p>
+      </div>
+      <div class="process-item">
+        <span class="process-num">02</span>
+        <h3>Diagnostic</h3>
+        <p>Visite sur place ou évaluation technique à distance selon la nature de l'intervention.</p>
+      </div>
+      <div class="process-item">
+        <span class="process-num">03</span>
+        <h3>Intervention</h3>
+        <p>Installation, réparation ou travaux réalisés par DMS13, avec suivi et garantie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="contact">
+  <div class="wrap cta-grid">
+    <div class="cta-copy">
+      <div class="eyebrow">Contact</div>
+      <h2>Un devis, une question ?</h2>
+      <p>Décrivez votre besoin — climatisation, électricité, plomberie ou rénovation — et DMS13 vous recontacte sous 24h.</p>
+      <ul class="contact-list">
+        <li>Tél. — 06 29 46 40 32</li>
+        <li>Email — ds.multiserv13@gmail.com</li>
+        <li>Zone — Bouches-du-Rhône & PACA</li>
+      </ul>
+    </div>
+    <form>
+      <div class="form-row">
+        <div>
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Jean Dupont">
+        </div>
+        <div>
+          <label for="tel">Téléphone</label>
+          <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00">
+        </div>
+      </div>
+      <div>
+        <label for="service">Service concerné</label>
+        <select id="service" name="service">
+          <option>Climatisation / PAC</option>
+          <option>Électricité</option>
+          <option>Plomberie</option>
+          <option>Rénovation</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Votre besoin</label>
+        <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre panne..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center; margin-top: 6px;">Envoyer la demande</button>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p>DMS13 — Climatisation · Électricité · Plomberie · Rénovation</p>
+  <p>© 2026 DMS13. Certifié QualiPAC.</p>
+</footer>
+
+</body>
+</html>
