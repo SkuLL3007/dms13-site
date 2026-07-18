@@ -24,33 +24,28 @@
     {"@type": "City", "name": "Istres"},
     {"@type": "City", "name": "Martigues"}
   ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "Provence-Alpes-Côte d'Azur",
-    "addressCountry": "FR"
-  },
+  "address": {"@type": "PostalAddress", "addressRegion": "Provence-Alpes-Côte d'Azur", "addressCountry": "FR"},
   "priceRange": "€€"
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0F2027;
-    --surface: #16323B;
-    --surface-2: #1D3D47;
-    --copper: #C9773B;
-    --copper-light: #E0A066;
-    --cyan: #5FBFCB;
-    --text: #EAF1F0;
-    --text-muted: #8FA6A8;
-    --border: rgba(234,241,240,0.12);
-    --border-strong: rgba(234,241,240,0.22);
-    --radius: 4px;
-    --font-display: 'Space Grotesk', sans-serif;
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    --ink: #14181A;
+    --ink-muted: #666E70;
+    --teal: #0E8C74;
+    --teal-light: #E6F5F1;
+    --amber: #E8863A;
+    --amber-light: #FDEEE2;
+    --border: #E7E5E0;
+    --radius-sm: 10px;
+    --radius-lg: 22px;
+    --font-display: 'Sora', sans-serif;
     --font-body: 'Inter', sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -60,245 +55,124 @@
   }
   body {
     background: var(--bg);
-    color: var(--text);
+    color: var(--ink);
     font-family: var(--font-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
   a { color: inherit; }
-  img, svg { display: block; max-width: 100%; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 0 28px; }
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
+  h2 { font-size: clamp(28px, 3.4vw, 42px); }
+  h3 { font-size: 19px; font-weight: 600; }
+  p { color: var(--ink-muted); }
   .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--cyan);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 600; color: var(--teal);
+    background: var(--teal-light); padding: 7px 14px; border-radius: 100px;
   }
-  .eyebrow::before {
-    content: "";
-    width: 6px; height: 6px;
-    background: var(--cyan);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  h1, h2, h3 {
-    font-family: var(--font-display);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
-  }
-  h2 { font-size: clamp(26px, 3.2vw, 38px); }
-  h3 { font-size: 19px; font-weight: 500; }
-  p { color: var(--text-muted); }
   .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 14px;
-    padding: 13px 22px;
-    border-radius: var(--radius);
-    border: 1px solid transparent;
-    cursor: pointer;
-    text-decoration: none;
-    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-weight: 600; font-size: 15px;
+    padding: 14px 26px; border-radius: 100px; border: 1.5px solid transparent;
+    cursor: pointer; text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
   }
-  .btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
-  .btn-primary { background: var(--copper); color: #1A0F06; }
-  .btn-primary:hover { background: var(--copper-light); transform: translateY(-1px); }
-  .btn-ghost { background: transparent; border-color: var(--border-strong); color: var(--text); }
-  .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+  .btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  .btn-primary { background: var(--ink); color: #fff; box-shadow: 0 10px 24px -8px rgba(20,24,26,0.35); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -8px rgba(20,24,26,0.4); }
+  .btn-outline { background: transparent; border-color: var(--border); color: var(--ink); }
+  .btn-outline:hover { border-color: var(--ink); }
 
-  /* Header */
-  header {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(15,32,39,0.88);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 18px 24px;
-  }
-  .logo {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 20px;
-    letter-spacing: -0.01em;
-    display: flex; align-items: baseline; gap: 6px;
-  }
-  .logo span { color: var(--copper); }
-  nav ul { list-style: none; display: flex; gap: 32px; }
-  nav ul a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.15s; }
-  nav ul a:hover { color: var(--text); }
-  .nav-links { display: flex; align-items: center; gap: 28px; }
-  @media (max-width: 760px) { .nav-links ul { display: none; } }
+  header { position: sticky; top: 0; z-index: 50; background: rgba(250,250,248,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+  .logo { font-family: var(--font-display); font-weight: 700; font-size: 28px; }
+  .logo span { color: var(--teal); }
+  nav ul { list-style: none; display: flex; gap: 34px; }
+  nav ul a { font-size: 14.5px; font-weight: 500; text-decoration: none; color: var(--ink-muted); transition: color 0.15s; }
+  nav ul a:hover { color: var(--ink); }
+  .nav-links { display: flex; align-items: center; gap: 30px; }
+  @media (max-width: 780px) { .nav-links ul { display: none; } }
 
-  /* Hero */
-  .hero {
-    padding: 88px 0 72px;
-    background-image:
-      linear-gradient(var(--border) 1px, transparent 1px),
-      linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 48px 48px;
-    background-position: center top;
-    border-bottom: 1px solid var(--border);
+  .hero { padding: 100px 0 90px; position: relative; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; top: -180px; right: -160px; width: 480px; height: 480px;
+    background: radial-gradient(circle, var(--teal-light) 0%, transparent 70%); z-index: 0;
   }
-  .hero-grid {
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center;
+  .hero::after {
+    content: ""; position: absolute; bottom: -200px; left: -180px; width: 420px; height: 420px;
+    background: radial-gradient(circle, var(--amber-light) 0%, transparent 70%); z-index: 0;
   }
-  @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
-  .hero h1 { font-size: clamp(34px, 5vw, 54px); margin: 16px 0 20px; }
-  .hero h1 em { font-style: normal; color: var(--copper); }
-  .hero p.lead { font-size: 17px; max-width: 46ch; margin-bottom: 32px; }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-inner { position: relative; z-index: 1; max-width: 780px; }
+  .hero h1 { font-size: clamp(38px, 5.6vw, 60px); margin: 22px 0 22px; }
+  .hero h1 .accent { color: var(--teal); }
+  .hero p.lead { font-size: 18px; max-width: 52ch; margin-bottom: 34px; }
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 56px; }
 
-  /* Gauge signature panel */
-  .gauge-panel {
-    background: var(--surface);
-    border: 1px solid var(--border-strong);
-    border-radius: 8px;
-    padding: 28px;
-  }
-  .gauge-panel .panel-label {
-    font-family: var(--font-mono); font-size: 11px; color: var(--text-muted);
-    text-transform: uppercase; letter-spacing: 0.1em;
-    display: flex; justify-content: space-between; margin-bottom: 18px;
-  }
-  .gauge-panel .panel-label .live { color: var(--cyan); }
-  .gauge-svg { width: 100%; height: auto; margin: 0 auto 18px; display: block; }
-  .gauge-needle {
-    transform-origin: 140px 140px;
-    animation: settle 1.4s cubic-bezier(.22,1.4,.36,1) forwards;
-  }
-  @keyframes settle {
-    0% { transform: rotate(-90deg); }
-    100% { transform: rotate(38deg); }
-  }
-  .readout-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  .readout {
-    background: var(--surface-2);
-    padding: 12px 14px;
-  }
-  .readout .k { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-  .readout .v { font-family: var(--font-mono); font-size: 15px; color: var(--text); margin-top: 3px; }
+  .trust-strip { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 32px; border-top: 1px solid var(--border); position: relative; z-index: 1; }
+  .trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 500; color: var(--ink-muted); }
+  .trust-item svg { color: var(--teal); flex-shrink: 0; }
 
-  section { padding: 84px 0; }
-  .section-head { max-width: 60ch; margin-bottom: 48px; }
-  .section-head h2 { margin-top: 14px; }
-  .section-head p { margin-top: 14px; font-size: 15px; }
+  section { padding: 90px 0; }
+  .section-head { max-width: 620px; margin-bottom: 52px; }
+  .section-head p { margin-top: 16px; font-size: 16px; }
 
-  /* Services */
-  .services-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-  }
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
   .service-card {
-    background: var(--bg);
-    padding: 28px 24px;
-    transition: background 0.2s;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+    padding: 30px 26px; transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  .service-card:hover { background: var(--surface); }
+  .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(20,24,26,0.18); }
   .service-icon {
-    width: 40px; height: 40px;
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 18px;
-    color: var(--copper);
+    width: 48px; height: 48px; border-radius: 14px; background: var(--teal-light);
+    display: flex; align-items: center; justify-content: center; color: var(--teal); margin-bottom: 20px;
   }
-  .service-card h3 { margin-bottom: 8px; }
-  .service-card p { font-size: 14px; }
+  .service-card h3 { margin-bottom: 10px; }
+  .service-card p { font-size: 14.5px; }
 
-  /* Marques / certification */
-  .trust-band {
-    background: var(--surface);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 48px 0;
-  }
-  .trust-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
-  .brands { display: flex; gap: 28px; flex-wrap: wrap; }
-  .brand-chip {
-    font-family: var(--font-mono); font-size: 13px; color: var(--text-muted);
-    border: 1px solid var(--border-strong); border-radius: var(--radius);
-    padding: 8px 14px;
-  }
-  .cert-badge {
-    display: flex; align-items: center; gap: 12px;
-    font-family: var(--font-mono); font-size: 13px;
-    border: 1px solid var(--copper); border-radius: var(--radius);
-    padding: 10px 16px; color: var(--copper-light);
-  }
+  .trust-band { background: var(--ink); border-radius: var(--radius-lg); padding: 44px 40px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .trust-band .cert { display: flex; align-items: center; gap: 12px; color: #fff; font-weight: 600; font-size: 15px; }
+  .trust-band .cert svg { color: var(--amber); }
+  .brands { display: flex; gap: 12px; flex-wrap: wrap; }
+  .brand-chip { font-size: 13.5px; font-weight: 500; color: rgba(255,255,255,0.9); border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 9px 16px; }
 
-  /* Zone */
-  .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-  @media (max-width: 760px) { .zone-grid { grid-template-columns: 1fr; } }
-  .zone-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-  .zone-chip {
-    font-size: 13px; padding: 8px 14px;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); color: var(--text-muted);
-  }
+  .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 780px) { .zone-grid { grid-template-columns: 1fr; } }
+  .zone-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .zone-chip { font-size: 13.5px; font-weight: 500; padding: 9px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 100px; }
+  .zone-visual { background: var(--teal-light); border-radius: var(--radius-lg); aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; }
 
-  /* Process */
-  .process-list { border-top: 1px solid var(--border); }
-  .process-item {
-    display: grid; grid-template-columns: 64px 1fr 2fr; gap: 24px;
-    padding: 28px 0; border-bottom: 1px solid var(--border);
-    align-items: baseline;
-  }
-  @media (max-width: 700px) { .process-item { grid-template-columns: 40px 1fr; } .process-item p { grid-column: 2; } }
-  .process-num { font-family: var(--font-mono); color: var(--copper); font-size: 14px; }
+  .process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 780px) { .process-grid { grid-template-columns: 1fr; } }
+  .process-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; }
+  .process-num { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: var(--teal-light); -webkit-text-stroke: 1.5px var(--teal); }
+  .process-card h3 { margin: 16px 0 8px; }
+  .process-card p { font-size: 14.5px; }
 
-  /* CTA / contact */
-  .cta-section {
-    background: var(--surface);
-    border-top: 1px solid var(--border);
-  }
+  .cta-section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 56px; }
   .cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
-  @media (max-width: 860px) { .cta-grid { grid-template-columns: 1fr; } }
-  .cta-copy p { font-size: 15px; margin-top: 14px; max-width: 42ch; }
-  .contact-list { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
-  .contact-list li { list-style: none; font-family: var(--font-mono); font-size: 14px; color: var(--text-muted); }
+  @media (max-width: 860px) { .cta-grid { grid-template-columns: 1fr; } .cta-section { padding: 32px; } }
+  .cta-copy p { font-size: 15.5px; margin-top: 14px; max-width: 42ch; }
+  .contact-list { margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+  .contact-list li { list-style: none; font-size: 14.5px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+  .contact-list svg { color: var(--teal); }
 
   form { display: flex; flex-direction: column; gap: 14px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
-  label { font-size: 12px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); display: block; margin-bottom: 6px; }
+  label { font-size: 13px; font-weight: 500; color: var(--ink-muted); display: block; margin-bottom: 7px; }
   input, select, textarea {
-    width: 100%;
-    background: var(--bg);
-    border: 1px solid var(--border-strong);
-    border-radius: var(--radius);
-    color: var(--text);
-    font-family: var(--font-body);
-    font-size: 14px;
-    padding: 11px 12px;
+    width: 100%; background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+    color: var(--ink); font-family: var(--font-body); font-size: 14.5px; padding: 12px 14px;
   }
-  input:focus, select:focus, textarea:focus { outline: 2px solid var(--cyan); outline-offset: 1px; border-color: var(--cyan); }
+  input:focus, select:focus, textarea:focus { outline: none; border-color: var(--teal); }
   textarea { resize: vertical; min-height: 90px; }
 
-  footer {
-    padding: 32px 0;
-    border-top: 1px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
-  }
-  footer p { font-size: 13px; }
+  footer { padding: 40px 0; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  footer p { font-size: 13.5px; }
+  footer a { color: var(--teal); font-weight: 500; text-decoration: none; }
 </style>
 </head>
 <body>
@@ -318,33 +192,18 @@
 </header>
 
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">QualiPAC · Bouches-du-Rhône & PACA</div>
-      <h1>Climatisation, électricité,<br>plomberie, <em>rénovation</em>.</h1>
-      <p class="lead">DMS13 intervient chez les particuliers et les professionnels du 13, du diagnostic à l'installation — pompes à chaleur, clim, réseau électrique, plomberie et travaux de rénovation.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Demander un devis</a>
-        <a href="#services" class="btn btn-ghost">Voir les services</a>
-      </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Certifié QualiPAC · Bouches-du-Rhône & PACA</span>
+    <h1>Le confort de votre logement, <span class="accent">géré de A à Z</span>.</h1>
+    <p class="lead">DMS13 installe et dépanne votre climatisation, votre pompe à chaleur, votre électricité, votre plomberie et accompagne vos travaux de rénovation — chez les particuliers comme chez les professionnels.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Demander un devis</a>
+      <a href="#services" class="btn btn-outline">Voir les services</a>
     </div>
-
-    <div class="gauge-panel">
-      <div class="panel-label"><span>Disponibilité</span><span class="live">● intervention sous 48h</span></div>
-      <svg class="gauge-svg" viewBox="0 0 280 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jauge d'intervention DMS13">
-        <path d="M 30 140 A 110 110 0 0 1 250 140" fill="none" stroke="#1D3D47" stroke-width="14" stroke-linecap="round"/>
-        <path d="M 30 140 A 110 110 0 0 1 250 140" fill="none" stroke="#C9773B" stroke-width="14" stroke-linecap="round" stroke-dasharray="245" stroke-dashoffset="70" opacity="0.85"/>
-        <g class="gauge-needle">
-          <line x1="140" y1="140" x2="140" y2="45" stroke="#EAF1F0" stroke-width="3" stroke-linecap="round"/>
-        </g>
-        <circle cx="140" cy="140" r="8" fill="#5FBFCB"/>
-      </svg>
-      <div class="readout-grid">
-        <div class="readout"><div class="k">Certification</div><div class="v">QualiPAC</div></div>
-        <div class="readout"><div class="k">Marques</div><div class="v">4 partenaires</div></div>
-        <div class="readout"><div class="k">Zone</div><div class="v">13 + PACA</div></div>
-        <div class="readout"><div class="k">Clientèle</div><div class="v">Part. & pro</div></div>
-      </div>
+    <div class="trust-strip">
+      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>Devis gratuit sous 24h</div>
+      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg>Certifié QualiPAC</div>
+      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>4 marques partenaires</div>
     </div>
   </div>
 </section>
@@ -352,67 +211,55 @@
 <section id="services">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Ce que fait DMS13</div>
-      <h2>Quatre métiers, un seul interlocuteur</h2>
+      <span class="eyebrow">Nos métiers</span>
+      <h2 style="margin-top:16px;">Quatre expertises, un seul artisan</h2>
       <p>Du dépannage à l'installation complète, DMS13 couvre l'ensemble des corps de métier techniques du bâtiment.</p>
     </div>
-  </div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="service-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg></div>
+        <h3>Climatisation & PAC</h3>
+        <p>Installation, entretien et dépannage — Daikin, Mitsubishi, Atlantic, Toshiba.</p>
       </div>
-      <h3>Climatisation & PAC</h3>
-      <p>Installation, entretien et dépannage de climatiseurs et pompes à chaleur — Daikin, Mitsubishi, Atlantic, Toshiba.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+      <div class="service-card">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <h3>Électricité</h3>
+        <p>Mise aux normes, tableaux électriques, dépannage résidentiel et tertiaire.</p>
       </div>
-      <h3>Électricité</h3>
-      <p>Mise aux normes, installation de tableaux, dépannage électrique résidentiel et tertiaire.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3v6a5 5 0 0 0 10 0V3M12 15v6"/></svg>
+      <div class="service-card">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v6a5 5 0 0 0 10 0V3M12 15v6"/></svg></div>
+        <h3>Plomberie</h3>
+        <p>Installation, réparation et entretien de vos réseaux d'eau et sanitaires.</p>
       </div>
-      <h3>Plomberie</h3>
-      <p>Installation, réparation et entretien de vos réseaux d'eau — sanitaires, chauffe-eau, canalisations.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>
+      <div class="service-card">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Rénovation</h3>
+        <p>Salle de bain, cuisine — travaux coordonnés avec vos besoins techniques.</p>
       </div>
-      <h3>Rénovation</h3>
-      <p>Travaux de rénovation intérieure — salle de bain, cuisine — coordonnés avec vos travaux techniques.</p>
     </div>
   </div>
 </section>
 
-<div class="trust-band">
-  <div class="wrap trust-inner">
-    <div class="cert-badge">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="6"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg>
-      Certifié QualiPAC
-    </div>
-    <div class="brands">
-      <span class="brand-chip">Daikin</span>
-      <span class="brand-chip">Mitsubishi</span>
-      <span class="brand-chip">Atlantic</span>
-      <span class="brand-chip">Toshiba</span>
+<section>
+  <div class="wrap">
+    <div class="trust-band">
+      <div class="cert"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M9 13l-2 8 5-3 5 3-2-8"/></svg>Certifié QualiPAC</div>
+      <div class="brands">
+        <span class="brand-chip">Daikin</span>
+        <span class="brand-chip">Mitsubishi</span>
+        <span class="brand-chip">Atlantic</span>
+        <span class="brand-chip">Toshiba</span>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <section id="zone">
   <div class="wrap zone-grid">
     <div>
-      <div class="eyebrow">Couverture</div>
-      <h2>Basés dans le 13,<br>on se déplace dans toute la région</h2>
-      <p>DMS13 intervient chez les particuliers comme chez les professionnels — syndics, agences, gestionnaires — sur l'ensemble des Bouches-du-Rhône et les départements limitrophes de PACA.</p>
-      <p style="margin-top: 14px; font-size: 14px;">Installation clim et pompe à chaleur à Marseille, dépannage électrique à Aix-en-Provence, plomberie à Aubagne, rénovation à Vitrolles — DMS13 se déplace dans tout le département pour vos travaux de climatisation, électricité, plomberie et rénovation.</p>
-    </div>
-    <div>
+      <span class="eyebrow">Couverture</span>
+      <h2 style="margin-top:16px;">Basés dans le 13, on se déplace dans toute la région</h2>
+      <p>DMS13 intervient chez les particuliers comme chez les professionnels — syndics, agences, gestionnaires — sur l'ensemble des Bouches-du-Rhône et les départements limitrophes de PACA. Installation clim et pompe à chaleur à Marseille, dépannage électrique à Aix-en-Provence, plomberie à Aubagne, rénovation à Vitrolles.</p>
       <div class="zone-chips">
         <span class="zone-chip">Marseille</span>
         <span class="zone-chip">Aix-en-Provence</span>
@@ -425,28 +272,31 @@
         <span class="zone-chip">+ reste de la PACA</span>
       </div>
     </div>
+    <div class="zone-visual">
+      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#0E8C74" stroke-width="1.4"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+    </div>
   </div>
 </section>
 
 <section id="process">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Déroulé</div>
-      <h2>Comment se passe une intervention</h2>
+      <span class="eyebrow">Déroulé</span>
+      <h2 style="margin-top:16px;">Comment se passe une intervention</h2>
     </div>
-    <div class="process-list">
-      <div class="process-item">
-        <span class="process-num">01</span>
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-num">01</div>
         <h3>Prise de contact</h3>
         <p>Vous décrivez votre besoin par téléphone ou via le formulaire — devis gratuit sous 24h.</p>
       </div>
-      <div class="process-item">
-        <span class="process-num">02</span>
+      <div class="process-card">
+        <div class="process-num">02</div>
         <h3>Diagnostic</h3>
         <p>Visite sur place ou évaluation technique à distance selon la nature de l'intervention.</p>
       </div>
-      <div class="process-item">
-        <span class="process-num">03</span>
+      <div class="process-card">
+        <div class="process-num">03</div>
         <h3>Intervention</h3>
         <p>Installation, réparation ou travaux réalisés par DMS13, avec suivi et garantie.</p>
       </div>
@@ -454,52 +304,56 @@
   </div>
 </section>
 
-<section class="cta-section" id="contact">
-  <div class="wrap cta-grid">
-    <div class="cta-copy">
-      <div class="eyebrow">Contact</div>
-      <h2>Un devis, une question ?</h2>
-      <p>Décrivez votre besoin — climatisation, électricité, plomberie ou rénovation — et DMS13 vous recontacte sous 24h.</p>
-      <ul class="contact-list">
-        <li>Tél. — 06 29 46 40 32</li>
-        <li>Email — ds.multiserv13@gmail.com</li>
-        <li>Zone — Bouches-du-Rhône & PACA</li>
-      </ul>
+<section id="contact">
+  <div class="wrap">
+    <div class="cta-section">
+      <div class="cta-grid">
+        <div class="cta-copy">
+          <span class="eyebrow">Contact</span>
+          <h2 style="margin-top:16px;">Un devis, une question ?</h2>
+          <p>Décrivez votre besoin — climatisation, électricité, plomberie ou rénovation — et DMS13 vous recontacte sous 24h.</p>
+          <ul class="contact-list">
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>06 29 46 40 32</li>
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>ds.multiserv13@gmail.com</li>
+            <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bouches-du-Rhône & PACA</li>
+          </ul>
+        </div>
+        <form action="https://formspree.io/f/xqerqkaj" method="POST">
+          <input type="hidden" name="_subject" value="Nouvelle demande de devis — DMS13">
+          <div class="form-row">
+            <div>
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" placeholder="Jean Dupont">
+            </div>
+            <div>
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00">
+            </div>
+          </div>
+          <div>
+            <label for="service">Service concerné</label>
+            <select id="service" name="service">
+              <option>Climatisation / PAC</option>
+              <option>Électricité</option>
+              <option>Plomberie</option>
+              <option>Rénovation</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Votre besoin</label>
+            <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre panne..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="justify-content:center; margin-top: 6px;">Envoyer la demande</button>
+        </form>
+      </div>
     </div>
-    <form action="https://formspree.io/f/xqerqkaj" method="POST">
-      <input type="hidden" name="_subject" value="Nouvelle demande de devis — DMS13">
-      <div class="form-row">
-        <div>
-          <label for="nom">Nom</label>
-          <input type="text" id="nom" name="nom" placeholder="Jean Dupont">
-        </div>
-        <div>
-          <label for="tel">Téléphone</label>
-          <input type="tel" id="tel" name="tel" placeholder="06 00 00 00 00">
-        </div>
-      </div>
-      <div>
-        <label for="service">Service concerné</label>
-        <select id="service" name="service">
-          <option>Climatisation / PAC</option>
-          <option>Électricité</option>
-          <option>Plomberie</option>
-          <option>Rénovation</option>
-          <option>Autre</option>
-        </select>
-      </div>
-      <div>
-        <label for="message">Votre besoin</label>
-        <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre panne..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="justify-content:center; margin-top: 6px;">Envoyer la demande</button>
-    </form>
   </div>
 </section>
 
 <footer class="wrap">
   <p>DMS13 — Climatisation · Électricité · Plomberie · Rénovation</p>
-  <p>© 2026 DMS13. Certifié QualiPAC. <a href="https://share.google/q2XnuynfXS3mMF7Al" style="color: var(--cyan);">Voir nos avis Google</a></p>
+  <p>© 2026 DMS13. Certifié QualiPAC. <a href="https://share.google/q2XnuynfXS3mMF7Al">Voir nos avis Google</a></p>
 </footer>
 
 </body>
