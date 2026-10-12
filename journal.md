@@ -41,7 +41,13 @@ Posts programmés à partir de ces photos (descriptions limitées à ce qui est 
 - 2026-11-03 10:00 | Rénovation appartement livré (carrousel 5 photos) | Drive 12dHbw2WETC6mhmtU6ye-wJFd74c6_b9V, 1yRw9lyql2_za596Mzbc0Nl-S2b72gC4f, 1tg4mbQcymmEkSpRzxQRImmcKOnDJSRKy, 1qYaxpjIBVbt8TnyLyB0d44IOyufOeeYm, 1x4AboIZTd72Una8l_gjEH4VQyZ2ibNau
 En réserve (même chantier appartement, non encore utilisées) : 1v9_bc_8k7_lDljLCbMM4Dpsv4ZveoBk5, 19yANID2U3M8ngI-QMTmVaiarX5arOrOX, 1LEIoI0ub1fbQE1rEwVdWmJlaXK8fAKCX, 1JihPr6wvQtiBXvd8BarOSy_H3iXZ6Osc
 Doublon ignoré : 1IwyzXATrdI_svb7oBCeu-tAeFpXqLUdt (même collage que 1koGc0VL…)
-Non utilisées faute de contexte (demander un brief à Jérémy) : 1fksDyqzAvLBd1n9LsHZFaHNBqUPNbUjk (ancienne SDB verte : Jérémy a annulé le 12/10, NE PAS UTILISER), 1XOgixv-fND60axIH1gLMyaAonVRUlc55 (garage encombré), 1EYUHCTlJqom2QiJj-aXcwKK9LEIp0Lfa (terrasse/bassin), 1d60JwUNoXcsrJ2xD2USvCP5dAwNpbTxf (portail + coffret, photo penchée)
+Non utilisées faute de contexte (demander un brief à Jérémy) : 1fksDyqzAvLBd1n9LsHZFaHNBqUPNbUjk (ancienne SDB verte, photo seule : non utilisée — l'avant/après fourni par Jérémy est utilisé à la place, voir plus bas), 1XOgixv-fND60axIH1gLMyaAonVRUlc55 (garage encombré), 1EYUHCTlJqom2QiJj-aXcwKK9LEIp0Lfa (terrasse/bassin), 1d60JwUNoXcsrJ2xD2USvCP5dAwNpbTxf (portail + coffret, photo penchée)
+
+## Nouveaux dossiers de Jérémy le 12/10/2026 (2 sont HORS de « DMS13 Réseaux » → non partagés, import Metricool impossible → photos copiées dans visuels/)
+- 2026-10-30 10:00 | Bâtiment modulaire port de Marseille (clim/élec/plomberie, cf. son post FB du 03/09) | visuels/chantier_batiment_modulaire.jpg (Drive 1A-2mTOa4Lui0YrZghaj62aiBeK732NC4, dossier « Bâtiment modulaire »)
+- 2026-11-06 10:00 | Réparation portail automatique | visuels/chantier_portail_auto.jpg (Drive 1d60JwUNoXcsrJ2xD2USvCP5dAwNpbTxf redressée, dossier « reparation portail automatique »)
+- 2026-11-10 10:00 | SDB verte avant/après | visuels/avant_apres_sdb_verte.jpg (Drive 1uuPCDRqpBAmVqnNcqMMt3q5UJxLySV7s, dossier « Avant après »)
+Astuce technique : si un fichier Drive est hors du dossier partagé, Metricool renvoie « Failed to normalize media » → héberger la photo dans visuels/ (raw.githubusercontent).
 
 ## Fichiers Drive déjà traités (ne pas réutiliser comme nouveauté)
 - 1iBOglhHTHR7Ui5jxHq1I-TufYcOchsg5, 1_kb-h0KxlQEcqg2H0stLVrVbA4-mqP6Q (dossier « 2 clims cache-clim »)
