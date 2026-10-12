@@ -71,3 +71,8 @@ Rythme actuel ~4 posts/semaine jusqu'au 10/11 : les prochaines exécutions peuve
 Test réussi : publication cuisine publiée 12/10 10:52 (PUBLISHED) + galerie 7 photos 12/10 10:54 (PUBLISHED : SDB verte avant/après, garage après, appartement SDB, local pro, clim façade, cache-clims, modulaire).
 Rattrapage programmé (gmbData publication, 10:05) : 15/10 SDB verte · 18/10 bâtiment modulaire · 21/10 garage · 24/10 local pro · 27/10 appartement · 30/10 clim façade · 02/11 cache-clims.
 → Rattrapage TERMINÉ : ne pas le refaire. À partir de maintenant : 1 publication Google par nouveau chantier + photos « après » en galerie.
+
+## 12/10/2026 : passage au rythme lundi + jeudi (demande de Jérémy)
+1 post Facebook + Instagram chaque lundi et jeudi à 10h00, premier post mardi 13/10. Tous les posts FB/IG déjà programmés ont été redatés (aucun supprimé) :
+13/10 PAC chauffe · 15/10 Présentation Jérémy · 19/10 Entretien PAC · 22/10 Local pro plafond LED · 26/10 Pendant/Après 2 clims · 29/10 Pièges rénovation SDB · 02/11 Tableau électrique hiver · 05/11 Clim en hauteur · 09/11 Astuce chauffe-eau · 12/11 Modulaire port · 16/11 Rénovation appartement · 19/11 Offre pros · 23/11 Vrai ou faux clim · 26/11 Portail automatique · 30/11 Avant/Après SDB · 03/12 Avant/Après garage.
+Prochain créneau libre FB/IG : lundi 07/12. Posts Google Business (gmb) non modifiés.
