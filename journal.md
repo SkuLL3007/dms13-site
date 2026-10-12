@@ -33,6 +33,16 @@ Drive : aucune nouvelle photo de chantier.
 Jérémy a demandé que ce soit automatique sur l'année à venir : la tâche hebdo (lundi 7h49, approbation auto, sans date de fin) le couvre ; on continue à programmer 2 semaines glissantes pour garder la place aux photos de chantier.
 Sujets libres restants : eau calcaire/adoucisseur, fuites/recherche de fuite, réglages PAC en hiver.
 
+## Photos déposées par Jérémy le 12/10/2026 (racine « DMS13 Réseaux », sans sous-dossier ni brief)
+Posts programmés à partir de ces photos (descriptions limitées à ce qui est visible) :
+- 2026-10-16 10:00 | Cuisine avant/après | Drive 12SL9Atg6M1k4QPqxLInqHYYMyGmJNiVX (collage)
+- 2026-10-20 10:00 | Local pro : plafond + éclairage LED (carrousel avant/pendant/après) | Drive 1yTFcKYcgZQszXuncEpHpU2WPdYK8oGsc, 17X8Y_S4SbNP4OdfmbzPs6NRP8v13w-Ff, 1koGc0VLiqBdQ-Atm2SEq6xPh1hJa7TUS
+- 2026-10-27 10:00 | Installation clim, groupe ext. en façade sur échafaudage | Drive 1GUMnjqhv-FlccF2TYre3TSK1ThXJQUd9 (collage)
+- 2026-11-03 10:00 | Rénovation appartement livré (carrousel 5 photos) | Drive 12dHbw2WETC6mhmtU6ye-wJFd74c6_b9V, 1yRw9lyql2_za596Mzbc0Nl-S2b72gC4f, 1tg4mbQcymmEkSpRzxQRImmcKOnDJSRKy, 1qYaxpjIBVbt8TnyLyB0d44IOyufOeeYm, 1x4AboIZTd72Una8l_gjEH4VQyZ2ibNau
+En réserve (même chantier appartement, non encore utilisées) : 1v9_bc_8k7_lDljLCbMM4Dpsv4ZveoBk5, 19yANID2U3M8ngI-QMTmVaiarX5arOrOX, 1LEIoI0ub1fbQE1rEwVdWmJlaXK8fAKCX, 1JihPr6wvQtiBXvd8BarOSy_H3iXZ6Osc
+Doublon ignoré : 1IwyzXATrdI_svb7oBCeu-tAeFpXqLUdt (même collage que 1koGc0VL…)
+Non utilisées faute de contexte (demander un brief à Jérémy) : 1fksDyqzAvLBd1n9LsHZFaHNBqUPNbUjk (ancienne SDB verte), 1XOgixv-fND60axIH1gLMyaAonVRUlc55 (garage encombré), 1EYUHCTlJqom2QiJj-aXcwKK9LEIp0Lfa (terrasse/bassin), 1d60JwUNoXcsrJ2xD2USvCP5dAwNpbTxf (portail + coffret, photo penchée)
+
 ## Fichiers Drive déjà traités (ne pas réutiliser comme nouveauté)
 - 1iBOglhHTHR7Ui5jxHq1I-TufYcOchsg5, 1_kb-h0KxlQEcqg2H0stLVrVbA4-mqP6Q (dossier « 2 clims cache-clim »)
 - 1qUSgiExBkf0XymaF1jPS6jPczm0jqRba (IMG_1148.HEIC, groupe Heiwa) : ignoré, HEIC non lu par Metricool
