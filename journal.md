@@ -35,7 +35,7 @@ Sujets libres restants : eau calcaire/adoucisseur, fuites/recherche de fuite, r�
 
 ## Photos déposées par Jérémy le 12/10/2026 (racine « DMS13 Réseaux », sans sous-dossier ni brief)
 Posts programmés à partir de ces photos (descriptions limitées à ce qui est visible) :
-- 2026-10-16 10:00 | Cuisine avant/après | Drive 12SL9Atg6M1k4QPqxLInqHYYMyGmJNiVX (collage)
+- 2026-10-12 11:02 (avancé, PUBLIÉ FB+IG ; le 16/10 est donc libre) | Cuisine avant/après | Drive 12SL9Atg6M1k4QPqxLInqHYYMyGmJNiVX (collage)
 - 2026-10-20 10:00 | Local pro : plafond + éclairage LED (carrousel avant/pendant/après) | Drive 1yTFcKYcgZQszXuncEpHpU2WPdYK8oGsc, 17X8Y_S4SbNP4OdfmbzPs6NRP8v13w-Ff, 1koGc0VLiqBdQ-Atm2SEq6xPh1hJa7TUS
 - 2026-10-27 10:00 | Installation clim, groupe ext. en façade sur échafaudage | Drive 1GUMnjqhv-FlccF2TYre3TSK1ThXJQUd9 (collage)
 - 2026-11-03 10:00 | Rénovation appartement livré (carrousel 5 photos) | Drive 12dHbw2WETC6mhmtU6ye-wJFd74c6_b9V, 1yRw9lyql2_za596Mzbc0Nl-S2b72gC4f, 1tg4mbQcymmEkSpRzxQRImmcKOnDJSRKy, 1qYaxpjIBVbt8TnyLyB0d44IOyufOeeYm, 1x4AboIZTd72Una8l_gjEH4VQyZ2ibNau
