@@ -53,3 +53,15 @@ Astuce technique : si un fichier Drive est hors du dossier partagé, Metricool r
 - 1iBOglhHTHR7Ui5jxHq1I-TufYcOchsg5, 1_kb-h0KxlQEcqg2H0stLVrVbA4-mqP6Q (dossier « 2 clims cache-clim »)
 - 1qUSgiExBkf0XymaF1jPS6jPczm0jqRba (IMG_1148.HEIC, groupe Heiwa) : ignoré, HEIC non lu par Metricool
 - 1Z7VWxRbyrY1Ux8USWy9prZeiaxiCJWKG, 1a1Znw6Nyu9snO4NGddFBGaXWOZ4WoyCa (visuels Claude)
+
+## Rangement du Drive (12/10/2026, à la demande de Jérémy « fais au mieux »)
+Photos en vrac rangées dans des sous-dossiers de « DMS13 Réseaux » (les ids ne changent pas) :
+- « Cuisine avant après » 1S31lmk97xUPyZhHNAGZd8i-rXnKxH15N — utilisé (16/10)
+- « Local pro plafond éclairage LED » 1BoeWoCqr_a7cEwM_2j9N7WfMHDdCxnxO — utilisé (20/10)
+- « Clim groupe en façade échafaudage » 1LDSt1DCclUugKGBWA-fY2pnmlwPnj5UU — utilisé (27/10)
+- « Appartement rénové » 1xpuLoZxzWgUc5LBfzmQr2tmAdHWvIJ8p — utilisé (03/11) ; 4 photos en réserve (couloir, entrée, 2 chambres) → possible 2e post « pièces de vie » dans 6+ semaines
+- « Bâtiment modulaire » 10Azwzkckfhz7d0C_kR3ABu9R5PakuFgZ et « SDB verte avant après » 1Ih5b_I78UdAFYXY7znyOIrIAe7_EJZNX — déplacés dans DMS13 Réseaux, utilisés (30/10, 10/11)
+- « A trier - dis-moi ce que c'est » 1haEaoAGS45AsBX-3VladKb57bZA4h7AW : garage encombré + terrasse/bassin, NE PAS publier sans brief de Jérémy (si le dossier est renommé, le nom devient le brief)
+- 1fksDyqzAvLBd1n9LsHZFaHNBqUPNbUjk (SDB verte seule) reste à la racine (déplacement refusé par Drive), déjà couverte par l'avant/après.
+Post appartement 03/11 : hashtag #avantapres retiré (nouvel id Metricool 393820405).
+Rythme actuel ~4 posts/semaine jusqu'au 10/11 : les prochaines exécutions peuvent revenir à 2-3/semaine.
