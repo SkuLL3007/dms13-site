@@ -26,6 +26,13 @@ Semaines du 13 au 18/10 et du 19 au 25/10 : 2 posts chacune → objectif atteint
 Drive : aucune nouvelle photo de chantier. Pas de bilan stats (aucun post encore publié) → faire le bilan début novembre.
 Prochains sujets libres (non encore traités) : eau calcaire/adoucisseur, rénovation salle de bain, fuites/recherche de fuite, réglages PAC en hiver.
 
+## Exécution du 12/10/2026 (2e passage, tâche planifiée)
+Fenêtre stricte mardi→dimanche : semaine du 20 au 25/10 n'avait qu'1 post (22/10) → ajout :
+- 2026-10-23 10:00 | Rénovation salle de bain : 4 pièges à éviter | visuels/renovation_sdb_pieges.png (thème light)
+Drive : aucune nouvelle photo de chantier.
+Jérémy a demandé que ce soit automatique sur l'année à venir : la tâche hebdo (lundi 7h49, approbation auto, sans date de fin) le couvre ; on continue à programmer 2 semaines glissantes pour garder la place aux photos de chantier.
+Sujets libres restants : eau calcaire/adoucisseur, fuites/recherche de fuite, réglages PAC en hiver.
+
 ## Fichiers Drive déjà traités (ne pas réutiliser comme nouveauté)
 - 1iBOglhHTHR7Ui5jxHq1I-TufYcOchsg5, 1_kb-h0KxlQEcqg2H0stLVrVbA4-mqP6Q (dossier « 2 clims cache-clim »)
 - 1qUSgiExBkf0XymaF1jPS6jPczm0jqRba (IMG_1148.HEIC, groupe Heiwa) : ignoré, HEIC non lu par Metricool
