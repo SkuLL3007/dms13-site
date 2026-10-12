@@ -65,3 +65,4 @@ Photos en vrac rangées dans des sous-dossiers de « DMS13 Réseaux » (les ids 
 - 1fksDyqzAvLBd1n9LsHZFaHNBqUPNbUjk (SDB verte seule) reste à la racine (déplacement refusé par Drive), déjà couverte par l'avant/après.
 Post appartement 03/11 : hashtag #avantapres retiré (nouvel id Metricool 393820405).
 Rythme actuel ~4 posts/semaine jusqu'au 10/11 : les prochaines exécutions peuvent revenir à 2-3/semaine.
+- 2026-11-13 10:00 | Garage avant/après + extérieur (carrousel) | dossier « garage avant après et son exterieur » 1_FrBhrCOUZJ1Sn9ZinMcze-A_C1lPstT : Drive 1XOgixv-fND60axIH1gLMyaAonVRUlc55 (avant), 1cKgKxVsBzNOpxs5FQAAvJ6VUmXFCfuqB (après), 19RpUnadEucb6eTlpW5qjFhqnSYEvCzPa (extérieur). 1EYUHCTlJqom2QiJj-aXcwKK9LEIp0Lfa (terrasse avec eau, même lieu) déplacée dans ce dossier, non utilisée. Le dossier « A trier » est maintenant vide.
