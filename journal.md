@@ -66,3 +66,8 @@ Photos en vrac rangées dans des sous-dossiers de « DMS13 Réseaux » (les ids 
 Post appartement 03/11 : hashtag #avantapres retiré (nouvel id Metricool 393820405).
 Rythme actuel ~4 posts/semaine jusqu'au 10/11 : les prochaines exécutions peuvent revenir à 2-3/semaine.
 - 2026-11-13 10:00 | Garage avant/après + extérieur (carrousel) | dossier « garage avant après et son exterieur » 1_FrBhrCOUZJ1Sn9ZinMcze-A_C1lPstT : Drive 1XOgixv-fND60axIH1gLMyaAonVRUlc55 (avant), 1cKgKxVsBzNOpxs5FQAAvJ6VUmXFCfuqB (après), 19RpUnadEucb6eTlpW5qjFhqnSYEvCzPa (extérieur). 1EYUHCTlJqom2QiJj-aXcwKK9LEIp0Lfa (terrasse avec eau, même lieu) déplacée dans ce dossier, non utilisée. Le dossier « A trier » est maintenant vide.
+
+## Fiche Google (GBP) connectée le 12/10/2026 — gbpData accounts/110001976092637386404/locations/7035461571441599291
+Test réussi : publication cuisine publiée 12/10 10:52 (PUBLISHED) + galerie 7 photos 12/10 10:54 (PUBLISHED : SDB verte avant/après, garage après, appartement SDB, local pro, clim façade, cache-clims, modulaire).
+Rattrapage programmé (gmbData publication, 10:05) : 15/10 SDB verte · 18/10 bâtiment modulaire · 21/10 garage · 24/10 local pro · 27/10 appartement · 30/10 clim façade · 02/11 cache-clims.
+→ Rattrapage TERMINÉ : ne pas le refaire. À partir de maintenant : 1 publication Google par nouveau chantier + photos « après » en galerie.
