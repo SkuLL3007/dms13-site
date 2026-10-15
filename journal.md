@@ -76,3 +76,11 @@ Rattrapage programmé (gmbData publication, 10:05) : 15/10 SDB verte · 18/10 b�
 1 post Facebook + Instagram chaque lundi et jeudi à 10h00, premier post mardi 13/10. Tous les posts FB/IG déjà programmés ont été redatés (aucun supprimé) :
 13/10 PAC chauffe · 15/10 Présentation Jérémy · 19/10 Entretien PAC · 22/10 Local pro plafond LED · 26/10 Pendant/Après 2 clims · 29/10 Pièges rénovation SDB · 02/11 Tableau électrique hiver · 05/11 Clim en hauteur · 09/11 Astuce chauffe-eau · 12/11 Modulaire port · 16/11 Rénovation appartement · 19/11 Offre pros · 23/11 Vrai ou faux clim · 26/11 Portail automatique · 30/11 Avant/Après SDB · 03/12 Avant/Après garage.
 Prochain créneau libre FB/IG : lundi 07/12. Posts Google Business (gmb) non modifiés.
+
+## Exécution du jeudi 15/10/2026 (tâche planifiée)
+Créneaux lundi/jeudi du 15/10 au 29/10 tous couverts (15 Présentation Jérémy · 19 Entretien PAC · 22 Local pro LED · 26 2 clims cache-clim · 29 Pièges SDB) ; FB/IG programmés jusqu'au 03/12.
+Hors rythme, ajouté par Jérémy le 14/10 : parrainage samedi 17/10 10:00 (FB + IG séparés, dossier Drive « parrainage » 1ZJVDwZO1ntDyCQXWFywQj3BvG5-orQB6) → ne pas toucher.
+Nouvelle photo : dossier « Tableau électrique » 1EfpUKiu60w-qjLabepzTaGbUwRJEOpIu, Drive 1QhRPmuU6Lt0yfusjOnylR-O2ZF6PBBCI (IMG_3826.jpg, armoire électrique pro en cours de câblage) → utilisée :
+- 2026-12-07 10:00 | Armoire électrique pro en plein câblage | Drive 1QhRPmuU6Lt0yfusjOnylR-O2ZF6PBBCI (Metricool id 396527184)
+Dossier « clim » 1QaaMr4SoORPptvFI2chTDlDTscGsjFKP : contient les 2 photos cache-clim déjà utilisées, rien de nouveau.
+Prochain créneau libre FB/IG : jeudi 10/12. Bilan stats à faire à la 1re exécution de novembre.
