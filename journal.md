@@ -104,3 +104,14 @@ Prochain créneau libre FB/IG : jeudi 10/12. Bilan stats à faire à l'exécutio
 Créneaux lundi/jeudi du 29/10 au 12/11 tous couverts (29 Pièges SDB · 02/11 Tableau électrique hiver · 05/11 Clim en hauteur · 09/11 Astuce chauffe-eau · 12/11 Modulaire port) ; aucun doublon, aucun post créé.
 Drive : aucun fichier créé ou modifié depuis le 25/10 → pas de nouvelle photo.
 Prochain créneau libre FB/IG : jeudi 10/12. Bilan stats à faire à l'exécution du lundi 02/11.
+
+## Exécution du lundi 02/11/2026 (tâche planifiée)
+Créneaux lundi/jeudi du 02/11 au 19/11 tous couverts (02 Tableau électrique hiver · 05 Clim en hauteur · 09 Astuce chauffe-eau · 12 Modulaire port · 16 Rénovation appartement · 19 Offre pros) ; aucun doublon, aucun post créé.
+Drive : aucune nouvelle photo depuis le 14/10 (seul fichier récent : journal-linkedin.md dans « Visuels Claude », sans rapport).
+Prochain créneau libre FB/IG : jeudi 10/12.
+
+### Bilan stats octobre (posts FB/IG du 12 au 29/10, chiffres Metricool au 02/11 ; posts récents encore incomplets)
+Instagram : portée cumulée 469, 29 interactions. Facebook : portée cumulée 672, 53 réactions.
+Top : Présentation Jérémy 15/10 (FB 270 portée, 24 réactions, 33 clics ; IG 111 portée, 15 interactions, 1 abonné) ; Cuisine avant/après 12/10 (FB 97/8 réactions ; IG 80/6 interactions) ; PAC chauffe 13/10 (FB 82 ; IG 60/4).
+Faibles : Pendant/Après cache-clims 26/10 (FB 17, IG 60 mais 0 interaction) ; Pièges SDB 29/10 (FB 32, IG 32, trop récent pour conclure).
+Ajustement pour les prochains posts à créer (à partir du 10/12) : plus de posts où Jérémy parle/apparaît, avant/après bien visibles ; moins de textes « conseil » seuls. Posts déjà programmés non modifiés.
