@@ -115,3 +115,8 @@ Instagram : portée cumulée 469, 29 interactions. Facebook : portée cumulée 6
 Top : Présentation Jérémy 15/10 (FB 270 portée, 24 réactions, 33 clics ; IG 111 portée, 15 interactions, 1 abonné) ; Cuisine avant/après 12/10 (FB 97/8 réactions ; IG 80/6 interactions) ; PAC chauffe 13/10 (FB 82 ; IG 60/4).
 Faibles : Pendant/Après cache-clims 26/10 (FB 17, IG 60 mais 0 interaction) ; Pièges SDB 29/10 (FB 32, IG 32, trop récent pour conclure).
 Ajustement pour les prochains posts à créer (à partir du 10/12) : plus de posts où Jérémy parle/apparaît, avant/après bien visibles ; moins de textes « conseil » seuls. Posts déjà programmés non modifiés.
+
+## Exécution du jeudi 05/11/2026 (tâche planifiée)
+Créneaux lundi/jeudi du 05/11 au 19/11 tous couverts (05 Clim en hauteur · 09 Astuce chauffe-eau · 12 Modulaire port · 16 Rénovation appartement · 19 Offre pros) ; FB/IG programmés jusqu'au 07/12 sans trou ni doublon. Aucun post créé.
+Drive : aucune nouvelle photo depuis le 14/10 (seuls fichiers récents : journal-linkedin*.md dans « Visuels Claude », sans rapport).
+Prochain créneau libre FB/IG : jeudi 10/12. Bilan stats de novembre déjà fait le 02/11 ; prochain à la 1re exécution de décembre.
