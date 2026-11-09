@@ -120,3 +120,8 @@ Ajustement pour les prochains posts à créer (à partir du 10/12) : plus de pos
 Créneaux lundi/jeudi du 05/11 au 19/11 tous couverts (05 Clim en hauteur · 09 Astuce chauffe-eau · 12 Modulaire port · 16 Rénovation appartement · 19 Offre pros) ; FB/IG programmés jusqu'au 07/12 sans trou ni doublon. Aucun post créé.
 Drive : aucune nouvelle photo depuis le 14/10 (seuls fichiers récents : journal-linkedin*.md dans « Visuels Claude », sans rapport).
 Prochain créneau libre FB/IG : jeudi 10/12. Bilan stats de novembre déjà fait le 02/11 ; prochain à la 1re exécution de décembre.
+
+## Exécution du lundi 09/11/2026 (tâche planifiée)
+Créneaux lundi/jeudi du 09/11 au 23/11 tous couverts (09 Astuce chauffe-eau · 12 Modulaire port · 16 Rénovation appartement · 19 Offre pros · 23 Vrai ou faux clim) ; aucun doublon, aucun post créé. Posts GBP 11/11 et 18/11 inchangés.
+Drive : aucun fichier créé ou modifié depuis le 04/11 → pas de nouvelle photo.
+Prochain créneau libre FB/IG : jeudi 10/12 (à vérifier dans Metricool : la liste ne remonte que 15 jours). Bilan stats : prochain à la 1re exécution de décembre.
